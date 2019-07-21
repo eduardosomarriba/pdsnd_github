@@ -5,6 +5,7 @@
 Bikeshare data analysis
 
 ### Description
+The project allows users to analyze the bikeshare data for three cities: Chicago, New York and Washington. The project provides the data for the first 6 months of 2018, and allows users to filter the data by city, month and day of the week. The project outputs statistical data for the data set filtered by the user.
 
 
 ### Files used
