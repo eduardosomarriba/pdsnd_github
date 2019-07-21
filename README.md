@@ -14,5 +14,7 @@ chicago.csv
 new_york_city.csv
 washington.csv
 
+These files are added in the .gitignore file
+
 ### Credits
 We thank Bikeshare for sharing the data files and Udacity for teaching us how to code.
