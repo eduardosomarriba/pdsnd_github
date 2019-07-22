@@ -165,6 +165,7 @@ def user_stats(df):
     # TO DO: Display counts of gender
     if 'Birth Year' in df.columns:
         print("\nThe breakdown of gender is:\n", df['Gender'].value_counts())
+        print("The ratio of male users is ", df['Gender'].value_counts()[0]/(df['Gender'].value_counts().sum()))
     else:
         print('*'*10," We don't have gender data available for this city. ",'*'*10)
 
