@@ -208,6 +208,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
+            print('*'*10," We hope you found this information useful. Have a great day! ",'*'*10)
             break
 
 if __name__ == "__main__":
