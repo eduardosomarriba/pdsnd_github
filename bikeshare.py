@@ -23,7 +23,13 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         try:
-            city = str(input("Type the name of the city you want to analyze (chicago, new york city or washington): ")).lower()
+            city = str(input("Type the name of the city you want to analyze (chicago (c), new york city (n) or washington (w)): ")).lower()
+            if city == 'c':
+                city = 'chicago'
+            if city == 'n':
+                city = 'new york city'
+            if city == 'w':
+                city = 'washington'
             check = CITY_DATA[city]
             break
         except:
