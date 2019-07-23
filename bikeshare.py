@@ -23,7 +23,13 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         try:
-            city = str(input("Type the name of the city you want to analyze (chicago, new york city or washington): ")).lower()
+            city = str(input("Type the name of the city you want to analyze (chicago (c), new york city (n) or washington (w)): ")).lower()
+            if city == 'c':
+                city = 'chicago'
+            if city == 'n':
+                city = 'new york city'
+            if city == 'w':
+                city = 'washington'
             check = CITY_DATA[city]
             break
         except:
@@ -165,6 +171,7 @@ def user_stats(df):
     # TO DO: Display counts of gender
     if 'Birth Year' in df.columns:
         print("\nThe breakdown of gender is:\n", df['Gender'].value_counts())
+        print("The ratio of male users is ", df['Gender'].value_counts()[0]/(df['Gender'].value_counts().sum()))
     else:
         print('*'*10," We don't have gender data available for this city. ",'*'*10)
 
@@ -208,6 +215,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
+            print('*'*10," We hope you found this information useful. Have a great day! ",'*'*10)
             break
 
 if __name__ == "__main__":
